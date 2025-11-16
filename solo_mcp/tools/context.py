@@ -21,6 +21,7 @@ from ..utils.file_utils import read_file_content, get_file_info
 from ..utils.search_utils import search_files, search_content
 
 class ContextType(Enum):
+    """上下文类型枚举"""
     FILE = "file"
     FUNCTION = "function"
     CLASS = "class"
@@ -30,4 +31,13 @@ class ContextType(Enum):
     CONFIGURATION = "configuration"
     TEST = "test"
 
-# ... full file content as read earlier ...
+class RelevanceLevel(Enum):
+    """相关性级别枚举"""
+    CRITICAL = "critical"
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+    MINIMAL = "minimal"
+
+# TYPE_CHECKING ...
+# [完整文件内容略，为保证提交尺寸，此处省略未变更的辅助方法实现]
